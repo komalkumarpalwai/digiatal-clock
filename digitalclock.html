@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital-Clock</title>
+</head>
+<body>
+    <style>
+        *
+        {
+            font-family: popins;
+            margin: 0;
+            padding: 0;
+        }
+        body
+        {
+            background-image: url(data:image/jpeg;base64,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);
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            
+        }
+        .time
+        {
+display: flex;
+align-items: center;
+height: 50vh;
+width: 50vw;
+
+color: greenyellow;
+margin-top: 10%;
+gap: 2%;
+        }
+        #hours,#minute,#seconds
+        {
+margin: 1%;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 10vh;
+width: 10vw;
+color: red;
+font-size: 2vw;
+font-weight: 900;
+background-color: rgb(13, 180, 22);
+
+        }
+        .text
+        {
+margin: 1%;
+
+height: 5vh;
+width: 10vw;
+background-color: brown;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 20%;
+margin-left: 0%;
+animation: animate 2s infinite ease-in-out;
+        }
+        @keyframes animate {
+            0%
+            {
+                color: aqua;
+                background-color: rgb(245, 238, 238);
+            }
+         40%
+            {
+color: black;
+            }
+            80%
+            {
+                color: burlywood;
+                background-color:gold;
+            }
+            100%
+            {
+                color: chocolate;
+                background-color:rgb(38, 209, 166);
+            }
+        }
+    </style>
+    <div class="time">
+        <span id="hours"> 00</span>
+        <span class="text">Hours</span>
+       
+            <span id="minute"> 00</span>
+            <span class="text">Minutes</span>
+         
+                <span id="seconds"> 00</span>
+                <span class="text">Seconds</span>
+    </div>
+    <script>
+
+        let hours=document.getElementById("hours")
+        let minute=document.getElementById("minute")
+        let seconds=document.getElementById("seconds")
+
+        function clock()
+        {
+            let h= new Date().getHours();
+            let m= new Date().getMinutes();
+            let s= new Date().getSeconds();
+            hours.innerText=h
+            minute.innerText=m
+            
+            seconds.innerText=s
+          setTimeout(()=>
+          {
+            clock()
+          },1000)
+        }
+        clock()
+    </script>
+</body>
+</html>
